@@ -1,0 +1,418 @@
+/* Définition des variables de couleur au niveau global (root) */
+:root {
+    --color-primary: #1E3A8A; /* Bleu foncé - Confiance */
+    --color-secondary: #F97316; /* Orange - Dynamisme (CTA) */
+    --color-background: #F9FAFB; /* Gris très pâle - Fond clair */
+    --color-text: #111827; /* Noir - Texte */
+    --color-white: #ffffff;
+}
+
+/* ------------------------------------- */
+/* Base et Réinitialisation */
+/* ------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Appliquer une police propre pour la base du site */
+body {
+    /* font-family: Arial, sans-serif; /* À remplacer par une police moderne */
+    /* line-height: 1.6; */
+    font-family: 'Inter', sans-serif; /* Pour le corps de texte */
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ------------------------------------- */
+/* Boutons (CTA) */
+/* ------------------------------------- */
+
+.btn-primary, .btn-secondary, .btn-cta {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px; /* Coins arrondis modernes */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Bouton CTA Principal (Orange Vif) */
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-primary:hover {
+    background-color: #E06514; /* Orange légèrement plus foncé au survol */
+}
+
+/* Bouton CTA Secondaire (Contour Bleu Foncé) */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* ------------------------------------- */
+/* 1. En-tête (Header) */
+/* ------------------------------------- */
+
+.main-header {
+    background-color: var(--color-background);
+    padding: 15px 0;
+    border-bottom: 1px solid #E5E7EB; /* Ligne de séparation subtile */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ------------------------------------- */
+/* 2. Section Héro */
+/* ------------------------------------- */
+
+.hero-section {
+    padding: 80px 0;
+    text-align: left;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Appliquer une police plus audacieuse pour les titres */
+.hero-section h2, .features-section h3, .final-cta h3, .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Gras */
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: var(--color-text);
+}
+
+.hero-image {
+    flex: 1;
+}
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Ajoutez une légère ombre pour un effet moderne */
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.1);
+    border-radius: 12px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* ------------------------------------- */
+/* 4. Section Fonctionnalités Clés */
+/* ------------------------------------- */
+
+.features-section {
+    padding: 60px 0;
+    background-color: var(--color-background); /* Utiliser le fond clair */
+    text-align: center;
+}
+
+.features-section h3 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-card {
+    flex: 1;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Ombre douce */
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--color-secondary); /* Icônes en Orange vif */
+    margin-bottom: 15px;
+}
+
+.feature-card h4 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------- */
+/* 7. Dernier Appel à l'Action (Final CTA) */
+/* ------------------------------------- */
+
+.final-cta {
+    background-color: var(--color-primary); /* Fond Bleu Foncé puissant */
+    padding: 60px 0;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.final-cta h3 {
+    color: var(--color-white);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+/* Le CTA dans cette section est naturellement le .btn-primary (Orange) */
+
+/* ------------------------------------- */
+/* 8. Pied de Page (Footer) */
+/* ------------------------------------- */
+
+/* .main-footer {
+    background-color: var(--color-primary); /* Fond Bleu Foncé */
+    /* color: var(--color-white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.main-footer a {
+    color: var(--color-white);
+    text-decoration: none;
+} */ 
+
+/* ------------------------------------- */
+/* 8. Pied de Page (Footer) - Mise à jour moderne */
+/* ------------------------------------- */
+
+.main-footer {
+    background-color: var(--color-primary); /* Fond Bleu Foncé */
+    color: var(--color-white);
+    padding-top: 50px; /* Espace interne pour aérer */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr); /* 4 colonnes, la première est plus large */
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-col h5 {
+    font-size: 1.1rem;
+    color: var(--color-secondary); /* Titres des colonnes en Orange dynamique */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: rgba(255, 255, 255, 0.7); /* Liens en blanc légèrement transparent */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--color-secondary); /* Orange vif au survol pour le dynamisme */
+}
+
+/* Branding et Texte d'introduction */
+.footer-branding .footer-logo {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-branding p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Icônes Sociales */
+.social-icons a {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: var(--color-white);
+}
+
+.social-icons a:hover {
+    color: var(--color-secondary);
+}
+
+/* Bandeau de droits d'auteur */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Responsive pour le Footer (à ajouter aux Media Queries existantes) */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes par défaut sur tablette */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+        text-align: center;
+    }
+    
+    .footer-branding {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Séparation entre les colonnes sur mobile */
+        margin-bottom: 20px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        display: flex;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+}
+
+/* ------------------------------------- */
+/* 9. MEDIA QUERIES (Responsive Design) */
+/* ------------------------------------- */
+
+/* Pour les écrans de taille moyenne (tablettes, jusqu'à 992px) */
+@media (max-width: 992px) {
+    .hero-section .container {
+        flex-direction: column; /* Empile le contenu et l'image */
+        text-align: center;
+    }
+
+    .hero-section h2 {
+        font-size: 2.5rem; /* Réduction de la taille du titre */
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .features-grid {
+        flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+    }
+
+    .feature-card {
+        flex-basis: calc(50% - 15px); /* Deux cartes par ligne sur tablette */
+    }
+}
+
+/* Pour les petits écrans (smartphones, jusqu'à 600px) */
+@media (max-width: 600px) {
+    /* En-tête */
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Section Héro */
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column; /* Empile les deux boutons CTA */
+        gap: 10px;
+    }
+    
+    .btn-secondary {
+        margin-left: 0; /* Supprime la marge latérale inutile */
+    }
+
+    /* Fonctionnalités */
+    .features-grid {
+        flex-direction: column; /* Une carte par ligne sur mobile */
+    }
+
+    .feature-card {
+        flex-basis: 100%;
+    }
+    
+    /* CTA Final */
+    .final-cta h3 {
+        font-size: 1.5rem;
+    }
+}

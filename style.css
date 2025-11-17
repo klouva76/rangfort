@@ -506,6 +506,244 @@ nav a:hover, nav a.current {
     text-decoration: none;
 } */ 
 
+
+/* --- NOUVEAUX STYLES SPÉCIFIQUES À L'APPROCHE --- */
+
+/* 2. BANNIÈRE APPROCHE (Ajustement de hauteur si nécessaire) */
+.hero-approche {
+    padding: 60px 20px;
+}
+
+/* 3. LA MÉTHODE EN 3 ÉTAPES */
+.methodology-steps {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+}
+
+.step-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--color-light-gray);
+}
+
+/* Style de la carte inversée pour une séquence visuelle */
+.step-card-reverse {
+    flex-direction: row-reverse; /* Inverse l'ordre pour un effet zig-zag */
+    background-color: var(--color-marine);
+    color: var(--color-white);
+}
+
+.step-card-reverse h3, .step-card-reverse p {
+    color: var(--color-white);
+}
+
+.step-card-reverse .step-icon {
+    color: var(--color-accent); /* Maintient l'accent sur l'icône */
+}
+
+
+.step-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-marine);
+    padding: 20px;
+    border-radius: 50%;
+    min-width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-icon {
+    font-size: 2rem;
+    color: var(--color-marine);
+    margin-bottom: 10px;
+}
+
+.step-card-reverse .step-icon {
+    color: var(--color-accent);
+}
+
+.step-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.step-separator {
+    text-align: center;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+/* RESPONSIVE (Approche) */
+@media (max-width: 768px) {
+    .step-card, .step-card-reverse {
+        flex-direction: column; /* Empilement vertical sur mobile */
+        text-align: center;
+    }
+
+    .step-number {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* --- NOUVEAUX STYLES SPÉCIFIQUES AU CONTACT --- */
+
+/* 2. BANNIÈRE CONTACT */
+.hero-contact {
+    padding: 60px 20px;
+}
+
+/* 3. GRILLE DE CONTACT */
+.contact-grid-section {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+}
+
+.contact-grid {
+    display: grid;
+    /* Deux colonnes : 2/3 pour le formulaire, 1/3 pour les infos */
+    grid-template-columns: 2fr 1fr; 
+    gap: 40px;
+}
+
+/* --- Formulaire --- */
+.contact-form-container {
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: var(--color-light-gray);
+}
+
+.form-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--color-marine);
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux groupes de se placer côte à côte */
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 10px); /* Deux éléments par ligne, moins la moitié de l'espacement */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    flex: 1 1 100%; /* Prend toute la largeur pour le message */
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-text);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(255, 184, 28, 0.3);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    /* Utilise les styles existants de cta-button-final */
+    margin-top: 10px;
+    width: auto; /* Prend la largeur nécessaire */
+    padding: 12px 30px;
+    cursor: pointer;
+}
+
+/* --- Informations Directes --- */
+.contact-info-container {
+    padding: 30px;
+    border-radius: 8px;
+    /* La couleur d'accent est définie dans accent-bg */
+    color: var(--color-marine); 
+}
+
+.info-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--color-marine);
+}
+
+.contact-info-container p {
+    color: var(--color-marine);
+    margin-bottom: 20px;
+}
+
+.info-detail {
+    margin-bottom: 25px;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    color: var(--color-marine);
+    margin-bottom: 5px;
+}
+
+.info-detail p {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.info-detail a, .info-detail address {
+    display: block;
+    color: var(--color-marine);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-style: normal; /* Annule l'italique de address */
+}
+
+.info-detail a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE (Contact) */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur tablette/mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .form-group {
+        flex: 1 1 100%; /* Un seul champ par ligne sur petit mobile */
+    }
+}
+
 /* ------------------------------------- */
 /* 8. Pied de Page (Footer) - Mise à jour moderne */
 /* ------------------------------------- */

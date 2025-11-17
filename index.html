@@ -8,131 +8,118 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("footer.html"); 
+    });
+    </script> 
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANG-FORT – Renfort tout simplement | La Clarté au Service de la Solidité</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="container">
-            <h1 class="logo">Votre Logo</h1>
+    <header class="header">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">RANG-FORT</a>
             <nav>
-                <ul>
-                    <li><a href="#">Produits</a></li>
-                    <li><a href="#">Solutions</a></li>
-                    <li><a href="#">À propos</a></li>
-                    <li><a href="#" class="btn-cta">Démarrer</a></li>
-                </ul>
+                <a href="index.html" class="current">Accueil</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="#">Approche</a>
+                <a href="#" class="cta-nav">Contact & Devis</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero-section">
+    <section class="hero-home">
         <div class="container">
-            <div class="hero-content">
-                <h2>Propulsez votre entreprise. Simplement. En toute confiance.</h2>
-                <p>Notre solution innovante simplifie vos processus quotidiens pour vous laisser vous concentrer sur l'essentiel : votre croissance.</p>
-                <div class="hero-actions">
-                    <a href="#" class="btn-primary">Démarrer l'essai gratuit de 14 jours</a>
-                    <a href="#" class="btn-secondary">Découvrir la plateforme</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="img/placeholder-mockup.png" alt="Aperçu de la plateforme">
+            <h1>Renforcez Votre Potentiel. <span class="highlight-accent">Simplement.</span></h1>
+            <p class="tagline">Nous transformons la complexité en force mesurable. Des fondations claires, des résultats concrets.</p>
+            <a href="solutions.html" class="cta-button-hero">Découvrir Nos Solutions de Renfort</a>
+            
+            <div class="hero-trust">
+                <p>Déjà +150 entreprises renforcées en France.</p>
             </div>
         </div>
     </section>
 
-    <section class="features-section">
+    <section class="proof-points">
         <div class="container">
-            <h3>Les outils conçus pour votre réussite.</h3>
-            <div class="features-grid">
+            <h2 class="section-title">Pourquoi RANG-FORT ? La clarté, sans l'excès.</h2>
+            <div class="points-grid">
+                <div class="point-item">
+                    <i class="fas fa-chart-line icon-proof"></i>
+                    <h3>Impact Mesurable</h3>
+                    <p>Fini les conseils théoriques. Nous travaillons uniquement sur des objectifs clairs et quantifiables.</p>
+                </div>
+                <div class="point-item">
+                    <i class="fas fa-lock icon-proof"></i>
+                    <h3>Solidité Durable</h3>
+                    <p>Nous bâtissons des structures qui tiennent dans le temps, vous rendant autonome et résistant.</p>
+                </div>
+                <div class="point-item">
+                    <i class="fas fa-magic icon-proof"></i>
+                    <h3>Processus Simple</h3>
+                    <p>Notre approche en 3 étapes réduit la charge mentale et accélère l'intégration du renfort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions-teaser">
+        <div class="container">
+            <h2 class="section-title">Nos Domaines de Renfort</h2>
+            
+            <div class="teaser-grid">
+                <a href="solutions.html#structurel" class="teaser-card">
+                    <i class="fas fa-sitemap"></i>
+                    <h3>Renfort Structurel</h3>
+                    <p>Stratégie, Gouvernance et Processus.</p>
+                    <span class="teaser-link">Voir l'offre <i class="fas fa-arrow-right"></i></span>
+                </a>
                 
-                <div class="feature-card">
-                    <i class="fas fa-lock feature-icon"></i>
-                    <h4>Sécurité Renforcée</h4>
-                    <p>Protégez vos données avec un cryptage de niveau bancaire. La confiance d'abord.</p>
-                </div>
+                <a href="solutions.html#operationnel" class="teaser-card accent-teaser">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Renfort Opérationnel</h3>
+                    <p>Efficacité, Projets et Outils.</p>
+                    <span class="teaser-link">Voir l'offre <i class="fas fa-arrow-right"></i></span>
+                </a>
 
-                <div class="feature-card">
-                    <i class="fas fa-magic feature-icon"></i>
-                    <h4>Simplicité Intuitive</h4>
-                    <p>Une interface épurée, conçue pour être maîtrisée en moins de 10 minutes. Zéro frustration.</p>
-                </div>
-
-                <div class="feature-card">
-                    <i class="fas fa-headset feature-icon"></i>
-                    <h4>Support 24/7</h4>
-                    <p>Notre équipe est là, jour et nuit, pour vous garantir une tranquillité d'esprit totale.</p>
-                </div>
-                
+                <a href="solutions.html#humain" class="teaser-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Renfort Humain</h3>
+                    <p>Compétences, Engagement et Culture.</p>
+                    <span class="teaser-link">Voir l'offre <i class="fas fa-arrow-right"></i></span>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="final-cta">
+    <section class="cta-final cta-home-dark">
         <div class="container">
-            <h3>Prêt à faire passer votre productivité au niveau supérieur ?</h3>
-            <a href="#" class="btn-primary">Je veux commencer maintenant !</a>
+            <h2>Marre des solutions compliquées ?</h2>
+            <p>Notre diagnostic de 30 minutes, c'est l'assurance d'un plan d'action simple et sans jargon.</p>
+            <a href="#" class="cta-button-final">Planifier Mon Diagnostic RANG-FORT</a>
         </div>
     </section>
 
-    <!-- <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2024 Votre Entreprise. Tous droits réservés.</p>
-            </div>
-    </footer> -->
 
     <footer class="main-footer">
-    <div class="container footer-grid">
-        
-        <div class="footer-col footer-branding">
-            <h4 class="footer-logo">Votre Logo</h4>
-            <p>Simplifier l'avenir de votre entreprise. En toute confiance.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-col">
-            <h5>Produits</h5>
-            <ul>
-                <li><a href="#">Vue d'ensemble</a></li>
-                <li><a href="#">Fonctionnalités avancées</a></li>
-                <li><a href="#">Tarifs</a></li>
-                <li><a href="#">Nouveautés</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h5>L'Entreprise</h5>
-            <ul>
-                <li><a href="#">À propos de nous</a></li>
-                <li><a href="#">Carrières</a></li>
-                <li><a href="#">Presse</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h5>Aide & Légal</h5>
-            <ul>
-                <li><a href="#">Centre d'aide</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Conditions générales</a></li>
-                <li><a href="#">Politique de confidentialité</a></li>
-            </ul>
-        </div>
-        
-    </div>
-
-    <div class="footer-bottom">
-        <div class="container">
-            <p>&copy; 2024 Votre Entreprise. Tous droits réservés.</p>
-        </div>
-    </div>
-</footer>
+        <div class="container footer-grid"></div>   
+    </footer> 
 
 </body>
 </html>
